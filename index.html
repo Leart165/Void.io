@@ -86,46 +86,62 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 60px;
-            margin-top: 60px;
+            height: 60px; /* Reduced height */
+            margin-top: 60px; /* Adjusted for fixed navigation bar */
         }
 
         h1 {
             font-family: Arial;
-            font-size: 15px;
+            font-size: 20px;
             margin: 0;
             text-align: center;
         }
 
-        .MiddleSec {
+        .about-section {
+            background-color: #fff;
+            margin: 20px 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-form-section {
+            background-color: #fff;
+            margin: 20px 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form-section form {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 20px 0;
+            gap: 10px;
         }
 
-        .MiddleSec img {
-            max-width: 100%;
-            height: auto;
+        .contact-form-section input, .contact-form-section textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .Artikel h2, .Artikel h3 {
-            margin: 10px 0;
+        .contact-form-section button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 0 20px;
-        }
-
-        .Tshirt img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        .contact-form-section button:hover {
+            background-color: #333;
         }
 
         footer {
@@ -230,6 +246,17 @@
             .payment img {
                 width: 80%;
             }
+
+            .product-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-info {
+                margin-left: 0;
+                margin-top: 20px;
+                text-align: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -269,7 +296,7 @@
         <section class="Navigation">
             <nav>
                 <div class="nav-left">
-                    <a href="index.html">HOME</a>
+                    <a href="VOID122/html/index.html">HOME</a>
                     <a href="VOID122/html/Produkt.html">PRODUCTS</a>
                 </div>
                 <div class="nav-center">
@@ -280,6 +307,7 @@
                 </div>
             </nav>
         </section>
+    
         <h1>RELEASE DATE 12.07.2024</h1>
     </header>
 
@@ -363,106 +391,6 @@
         <p>&copy; 2023 VOID® Streetwear.</p>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var video = document.getElementById("background-video");
-            var toggleButton = document.getElementById("toggle-video");
-            var volumeButton = document.getElementById("volume-button");
-            
-            toggleButton.addEventListener("click", function() {
-                if (video.paused) {
-                    video.play();
-                    toggleButton.innerHTML = '<i class="fa-regular fa-circle-pause"></i>';
-                } else {
-                    video.pause();
-                    toggleButton.innerHTML = '<i class="fa-regular fa-circle-play"></i>';
-                }
-            });
-
-            volumeButton.addEventListener("click", function() {
-                if (video.muted) {
-                    video.muted = false;
-                    volumeButton.innerHTML = '<i class="fa-solid fa-volume-low"></i>';
-                } else {
-                    video.muted = true;
-                    volumeButton.innerHTML = '<i class="fa-solid fa-volume-off"></i>';
-                }
-            });
-
-            document.querySelectorAll('.Tshirt').forEach(item => {
-                item.addEventListener('click', event => {
-                    const product = {
-                        name: item.dataset.name,
-                        image: item.dataset.image,
-                        description: item.dataset.description,
-                        price: item.dataset.price
-                    };
-
-                    localStorage.setItem('selectedProduct', JSON.stringify(product));
-                    window.location.href = 'produktdetail.html';
-                });
-            });
-        });
-
-        function showNewImage() {
-            document.getElementById("originalImage").style.display = "none";
-            document.getElementById("newImage").style.display = "block";
-        }
-
-        function showOriginalImage() {
-            document.getElementById("originalImage").style.display = "block";
-            document.getElementById("newImage").style.display = "none";
-        }
-
-        function showNewImage2() {
-            document.getElementById("originalImage2").style.display = "none";
-            document.getElementById("newImage2").style.display = "block";
-        }
-
-        function showOriginalImage2() {
-            document.getElementById("originalImage2").style.display = "block";
-            document.getElementById("newImage2").style.display = "none";
-        }
-
-        function showNewImage3() {
-            document.getElementById("originalImage3").style.display = "none";
-            document.getElementById("newImage3").style.display = "block";
-        }
-
-        function showOriginalImage3() {
-            document.getElementById("originalImage3").style.display = "block";
-            document.getElementById("newImage3").style.display = "none";
-        }
-
-        function showNewImage4() {
-            document.getElementById("originalImage4").style.display = "none";
-            document.getElementById("newImage4").style.display = "block";
-        }
-
-        function showOriginalImage4() {
-            document.getElementById("originalImage4").style.display = "block";
-            document.getElementById("newImage4").style.display = "none";
-        }
-
-        function showNewImage5() {
-            document.getElementById("originalImage5").style.display = "none";
-            document.getElementById("newImage5").style.display = "block";
-        }
-
-        function showOriginalImage5() {
-            document.getElementById("originalImage5").style.display = "block";
-            document.getElementById("newImage5").style.display = "none";
-        }
-
-        function showNewImage6() {
-            document.getElementById("originalImage6").style.display = "none";
-            document.getElementById("newImage6").style.display = "block";
-        }
-
-        function showOriginalImage6() {
-            document.getElementById("originalImage6").style.display = "block";
-            document.getElementById("newImage6").style.display = "none";
-        }
-    </script>
+    <script src="VOID122/js/homejava.js"></script>
 </body>
 </html>
