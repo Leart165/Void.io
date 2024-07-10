@@ -7,309 +7,306 @@
     <link rel="icon" href="VOID122/bilder/VOIDLOGOBAR.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-/* General Styles */
-body {
-    background-color: rgb(248, 248, 248);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        /* General Styles */
+        body {
+            background-color: rgb(248, 248, 248);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-main {
-    flex: 1;
-}
+        main {
+            flex: 1;
+        }
 
-.Navigation {
-    background-color: #ffffff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        .Navigation {
+            background-color: #ffffff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+        }
 
-.nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.nav-center {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-}
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
 
-.nav-left a, .nav-right a {
-    font-family: Roboto, sans-serif;
-    text-decoration: none;
-    color: #000000;
-    font-size: 14px;
-    position: relative;
-}
+        .nav-left a, .nav-right a {
+            font-family: Roboto, sans-serif;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            position: relative;
+        }
 
-.nav-left a:hover::after, .nav-right a:hover::after {
-    width: 100%;
-}
+        .nav-left a:hover::after, .nav-right a:hover::after {
+            width: 100%;
+        }
 
-.nav-left a::after, .nav-right a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #919191;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s ease;
-}
+        .nav-left a::after, .nav-right a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: #919191;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
 
-.Logo {
-    height: 45px;
-    width: auto;
-    margin-right: 60px; /* Adjusted for fixed navigation bar */
-}
+        .Logo {
+            height: 45px;
+            width: auto;
+        }
 
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px; /* Reduced height */
-    margin-top: 60px; /* Adjusted for fixed navigation bar */
-}
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px; /* Reduced height */
+            margin-top: 60px; /* Adjusted for fixed navigation bar */
+        }
 
-h1 {
-    font-family: Arial;
-    font-size: 15px;
-    margin: 0;
-    text-align: center;
-}
+        h1 {
+            font-family: Arial;
+            font-size: 20px;
+            margin: 0;
+            text-align: center;
+        }
 
-/* Video Section Styles */
-.Video {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
+        /* Video Section Styles */
+        .Video {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
 
-#background-video {
-    width: 100%;
-    height: auto;
-    margin-top: -60px; /* To make the video start right under the header */
-}
+        #background-video {
+            width: 100%;
+            height: auto;
+            margin-top: -60px; /* To make the video start right under the header */
+        }
 
-@media (max-width: 768px) {
-    #background-video {
-        height: 100vh;
-        width: auto;
-    }
-}
+        @media (max-width: 768px) {
+            #background-video {
+                height: 100vh;
+                width: auto;
+            }
+        }
 
-#toggle-video, #volume-button {
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 3em;
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    left: 7%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    color: white;
-}
+        #toggle-video, #volume-button {
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 3em;
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            left: 7%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            color: white;
+        }
 
-#volume-button {
-    top: 55%;
-}
+        #volume-button {
+            top: 55%;
+        }
 
-/* Artikel Styles */
-.Artikel {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-}
+        /* Artikel Styles */
+        .Artikel {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+        }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.Tshirt {
-    text-align: center;
-    cursor: pointer;
-}
+        .Tshirt {
+            text-align: center;
+            cursor: pointer;
+        }
 
-.WhiteTshirt {
-    width: 100%;
-    height: auto;
-}
+        .WhiteTshirt {
+            width: 100%;
+            height: auto;
+        }
 
-/* Footer Styles */
-footer {
-    background-color: rgb(247, 247, 247);
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-    width: 100%;
-    box-sizing: border-box;
-}
+        /* Footer Styles */
+        footer {
+            background-color: rgb(247, 247, 247);
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
-}
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
 
-.footer-section h6 {
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
+        .footer-section h6 {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
 
-.footer-section a {
-    display: block;
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
-    margin: 5px 0;
-    text-decoration: none;
-    color: #000;
-}
+        .footer-section a {
+            display: block;
+            font-family: Roboto, sans-serif;
+            font-size: 12px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #000;
+        }
 
-.notification form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .notification form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.Email {
-    height: 40px;
-    width: 100%;
-    max-width: 240px;
-    margin-bottom: 10px;
-}
+        .Email {
+            height: 40px;
+            width: 100%;
+            max-width: 240px;
+            margin-bottom: 10px;
+        }
 
-.Absenden {
-    height: 50px;
-    width: 100%;
-    max-width: 248px;
-}
+        .Absenden {
+            height: 50px;
+            width: 100%;
+            max-width: 248px;
+        }
 
-.payment img {
-    height: auto;
-    width: 100%;
-    max-width: 300px;
-}
+        .payment img {
+            height: auto;
+            width: 100%;
+            max-width: 300px;
+        }
 
-footer p {
-    font-family: Roboto, sans-serif;
-    font-size: 10px;
-    color: #000;
-}
+        footer p {
+            font-family: Roboto, sans-serif;
+            font-size: 10px;
+            color: #000;
+        }
 
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
 
-    .nav-left, .nav-right {
-        flex: 1;
-        justify-content: center;
-    }
+            .nav-left, .nav-right {
+                flex: 1;
+                justify-content: center;
+            }
 
-    .nav-center {
-        order: -1;
-    }
+            .nav-center {
+                order: -1;
+            }
 
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .footer-section {
-        margin: 20px 0;
-    }
+            .footer-section {
+                margin: 20px 0;
+            }
 
-    .Email, .Absenden {
-        width: 80%;
-    }
+            .Email, .Absenden {
+                width: 80%;
+            }
 
-    .payment img {
-        width: 80%;
-    }
+            .payment img {
+                width: 80%;
+            }
 
-    .product-details {
-        flex-direction: column;
-        align-items: center;
-    }
+            .product-details {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .product-info {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;
-    }
-}
+            .product-info {
+                margin-left: 0;
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
 
-@media (max-width: 480px) {
-    .nav-left, .nav-right {
-        gap: 10px;
-    }
+        @media (max-width: 480px) {
+            .nav-left, .nav-right {
+                gap: 10px;
+            }
 
-    .nav-left a, .nav-right a {
-        font-size: 12px;
-    }
+            .nav-left a, .nav-right a {
+                font-size: 12px;
+            }
 
-    .nav-center img {
-        height: 35px;
-    }
+            .nav-center img {
+                height: 35px;
+            }
 
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .footer-section {
-        margin: 20px 0;
-    }
+            .footer-section {
+                margin: 20px 0;
+            }
 
-    .Email, .Absenden {
-        width: 80%;
-    }
+            .Email, .Absenden {
+                width: 80%;
+            }
 
-    .payment img {
-        width: 80%;
-    }
-}
-
+            .payment img {
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -317,7 +314,7 @@ footer p {
     <section class="Navigation">
         <nav>
             <div class="nav-left">
-                <a href="VOID122/html/index.html">HOME</a>
+                <a href="index.html">HOME</a>
                 <a href="VOID122/html/Produkt.html">PRODUCTS</a>
             </div>
             <div class="nav-center">
@@ -419,7 +416,7 @@ footer p {
                 <h6>NEVER MISS A DROP</h6>
                 <a>SIGN UP TO GET RELEASE NOTIFICATIONS.</a>
                 <form method="POST" action="VOID122/php/process_newsletter.php">
-                    <input class="Email" type="text" id="mail" name="mail" placeholder="ENTER YOUR EMAIL . . . ">
+                    <input class="Email" type="email" id="mail" name="mail" placeholder="ENTER YOUR EMAIL . . . " required>
                     <input class="Absenden" type="submit" value="GET NOTIFICATIONS">
                 </form>
             </div>
@@ -453,6 +450,46 @@ footer p {
         <p>&copy; 2023 VOID® Streetwear.</p>
     </footer>
 
-    <script src="VOID122/js/homejava.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("background-video");
+            var toggleButton = document.getElementById("toggle-video");
+            var volumeButton = document.getElementById("volume-button");
+            
+            toggleButton.addEventListener("click", function() {
+                if (video.paused) {
+                    video.play();
+                    toggleButton.innerHTML = '<i class="fa-regular fa-circle-pause"></i>';
+                } else {
+                    video.pause();
+                    toggleButton.innerHTML = '<i class="fa-regular fa-circle-play"></i>';
+                }
+            });
+
+            volumeButton.addEventListener("click", function() {
+                if (video.muted) {
+                    video.muted = false;
+                    volumeButton.innerHTML = '<i class="fa-solid fa-volume-low"></i>';
+                } else {
+                    video.muted = true;
+                    volumeButton.innerHTML = '<i class="fa-solid fa-volume-off"></i>';
+                }
+            });
+
+            document.querySelectorAll('.Tshirt').forEach(item => {
+                item.addEventListener('click', event => {
+                    const product = {
+                        name: item.dataset.name,
+                        image: item.dataset.image,
+                        description: item.dataset.description,
+                        price: item.dataset.price
+                    };
+
+                    localStorage.setItem('selectedProduct', JSON.stringify(product));
+                    window.location.href = 'produktdetail.html';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
