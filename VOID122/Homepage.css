@@ -1,0 +1,367 @@
+body {
+    background-color: rgb(248, 248, 248);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.Navigation {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-left a, .nav-right a {
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    position: relative;
+}
+
+.nav-left a:hover::after, .nav-right a:hover::after {
+    width: 100%;
+}
+
+.nav-left a::after, .nav-right a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #919191;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.Logo {
+    height: 45px;
+    width: auto;
+    margin-right: 55px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    margin-top: 70px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    margin: 0; 
+}
+
+.MiddleSec {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.HopePage1 {
+    width: 100%;
+    max-width: 1205px;
+}
+
+.Menbutton {
+    background-color: #ffffff;
+    font-family: Roboto, sans-serif;
+    border: none;
+    padding: 15px 45px;
+    font-size: 21px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 10px;
+    z-index: 1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text2 h2 {
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text2 h3 {
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h4 {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    margin: 0 20px;
+}
+
+.EndSec {
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+.text3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.backgroundtshirtpictures {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.overlay-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+footer {
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h6 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #000;
+}
+
+.notification form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Email {
+    height: 40px;
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 10px;
+}
+
+.Absenden {
+    height: 50px;
+    width: 100%;
+    max-width: 248px;
+}
+
+.payment img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+footer p {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-left, .nav-right {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .nav-center {
+        order: -1;
+    }
+
+    .text2 h2 {
+        font-size: 18px;
+        top: 35%;
+    }
+
+    .text2 h3 {
+        font-size: 45px;
+        top: 45%;
+    }
+
+    .Menbutton {
+        font-size: 18px;
+        top: 55%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+
+    .Email, .Absenden {
+        width: 80%;
+    }
+
+    .payment img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-left, .nav-right {
+        gap: 10px;
+    }
+
+    .nav-left a, .nav-right a {
+        font-size: 12px;
+    }
+
+    .nav-center img {
+        height: 35px;
+    }
+
+    .text2 h2 {
+        font-size: 16px;
+        top: 30%;
+    }
+
+    .text2 h3 {
+        font-size: 40px;
+        top: 40%;
+    }
+
+    .Menbutton {
+        font-size: 16px;
+        padding: 10px 20px;
+        top: 50%;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section h6 {
+        font-size: 14px;
+    }
+
+    .footer-section a {
+        font-size: 10px;
+    }
+}

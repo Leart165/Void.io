@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldeformular</title>
+    <link rel="stylesheet" href="Anmeldeseite.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="VOIDLOGOBAR.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <section class="Navigation">
+        <nav class="navtext">
+            <a href="Homepage.html">HOME</a>
+            <a href="MännerShop.html">MEN</a>
+            <a href="DamenShop.html">WOMEN</a>
+            <a href="Kindershop.html">KIDS</a>
+            <a href="Anmeldeseite.html">LOG IN</a>
+            <img class="Logo" src="VOIDLOGO.png">
+        </nav> 
+
+        <nav class="navicon">
+            <div class="menu-items">
+                <a href="Anmeldeseite.html"><i class="fa-regular fa-user"></i></a>
+                <a href="Anmeldeseite.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </nav> 
+    </section>
+
+    <section class="Anmeldeformular">
+        <h2>Anmeldeformular</h2>
+        <form action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="email">Emailadresse:</label><br>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+            <div class="form-group">
+                <label for="vorname">Vorname:</label><br>
+                <input type="text" id="vorname" name="vorname" required><br>
+            </div>
+            <div class="form-group">
+                <label for="nachname">Nachname:</label><br>
+                <input type="text" id="nachname" name="nachname" required><br>
+            </div>
+            <div class="form-group">
+                <label for="anrede">Anrede:</label><br>
+                <select id="anrede" name="anrede" required>
+                    <option value="Herr">Herr</option>
+                    <option value="Frau">Frau</option>
+                </select><br>
+            </div>
+            <div class="form-group">
+                <label for="passwort">Passwort:</label><br>
+                <input type="password" id="passwort" name="passwort" required><br><br>
+            </div>
+            <button type="submit">Anmelden</button>
+        </form>
+    </section>
+
+</body>
+</html>

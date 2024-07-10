@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="icon" href="VOIDLOGOBAR.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Styles */
+        body {
+            background-color: rgb(248, 248, 248);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .Navigation {
+            background-color: #ffffff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .nav-left a, .nav-right a {
+            font-family: Roboto, sans-serif;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .nav-left a:hover::after, .nav-right a:hover::after {
+            width: 100%;
+        }
+
+        .nav-left a::after, .nav-right a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: #919191;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .Logo {
+            height: 45px;
+            width: auto;
+            margin-right: 55px; /* Adjusted for fixed navigation bar */
+        }
+
+        .about-section {
+            background-color: #fff;
+            margin: 120px 20px 20px 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-form-section {
+            background-color: #fff;
+            margin: 20px 20px 20px 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form-section input, .contact-form-section textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form-section button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .contact-form-section button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: rgb(247, 247, 247);
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-section h6 {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            display: block;
+            font-family: Roboto, sans-serif;
+            font-size: 12px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .payment img {
+            height: auto;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        footer p {
+            font-family: Roboto, sans-serif;
+            font-size: 10px;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .nav-left, .nav-right {
+                flex: 1;
+                justify-content: center;
+            }
+
+            .nav-center {
+                order: -1;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                margin: 20px 0;
+            }
+
+            .payment img {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-left, .nav-right {
+                gap: 10px;
+            }
+
+            .nav-left a, .nav-right a {
+                font-size: 12px;
+            }
+
+            .nav-center img {
+                height: 35px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                margin: 20px 0;
+            }
+
+            .payment img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="Navigation">
+            <nav>
+                <div class="nav-left">
+                    <a href="Homepage.html">HOME</a>
+                    <a href="Produkt.html">PRODUCTS</a>
+                </div>
+                <div class="nav-center">
+                    <img class="Logo" src="VOIDLOGO.png" alt="VOID Logo">
+                </div>
+                <div class="nav-right">
+                    <a href="kontakt.html">KONTAKT</a>
+                </div>
+            </nav>
+        </section>
+        </header>
+
+    <main>
+        <section class="about-section">
+            <h2>About us</h2>
+            <p>Information about the company, mission, values, etc.</p>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Kontaktformular</h2>
+            <form>
+                <input type="text" name="name" placeholder="Ihr Name" required>
+                <input type="email" name="email" placeholder="Ihre E-Mail" required>
+                <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+                <button type="submit">Absenden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section notification">
+                <h6>NEVER MISS A DROP</h6>
+                <a>SIGN UP TO GET RELEASE NOTIFICATIONS.</a>
+                <form method="POST" action="process_newsletter.php">
+                    <input class="Email" type="text" id="mail" name="mail" placeholder="ENTER YOUR EMAIL . . . ">
+                    <input class="Absenden" type="submit" value="GET NOTIFICATIONS">
+                </form>
+            </div>
+            <div class="footer-section follow">
+                <h6>FOLLOW US</h6>
+                <a href="#">INSTAGRAM</a>
+                <a href="#">TIKTOK</a>
+                <a href="#">TWITTER</a>
+            </div>
+            <div class="footer-section information">
+                <h6>INFORMATION</h6>
+                <a href="#">IMPRINT</a>
+                <a href="#">SHIPPING</a>
+                <a href="#">FAQ</a>
+                <a href="#">RETURNS</a>
+                <a href="#">JOBS</a>
+            </div>
+            <div class="footer-section about-us">
+                <h6>ABOUT US</h6>
+                <a href="#">IMPRINT</a>
+                <a href="#">SHIPPING</a>
+                <a href="#">FAQ</a>
+                <a href="#">RETURNS</a>
+                <a href="#">JOBS</a>
+            </div>
+            <div class="footer-section payment">
+                <h6>PAYMENT METHODS</h6>
+                <img src="Payments_photo.png" alt="Payment Methods">
+            </div>
+        </div>
+        <p>&copy; 2024 VOID® Streetwear.</p>
+    </footer>
+</body>
+</html>
