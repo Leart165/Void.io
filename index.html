@@ -21,28 +21,30 @@
         }
 
         header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px; /* Höhe reduziert */
-            margin-top: 40px; /* Abstand nach oben reduziert */
-            padding: 0; /* Kein Padding */
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Höhe reduziert */
+    margin-top: 40px; /* Abstand nach oben reduziert */
+    padding: 0; /* Kein Padding */
+}
 
-        h1 {
-            font-family: Arial;
-            font-size: 15px;
-            margin: 0; /* Kein Abstand nach oben und unten */
-            text-align: center;
-            margin-top: 70px;
-        }
+h1 {
+    font-family: Arial;
+    font-size: 15px;
+    margin: 0; /* Kein Abstand nach oben und unten */
+    text-align: center;
+    margin-top: 70px;
+}
 
-        main {
-            flex: 1;
-            padding-top: 0; /* Kein Abstand nach oben */
-        }
+main {
+    flex: 1;
+    padding-top: 0; /* Kein Abstand nach oben */
+}
 
-        nav {
+
+
+nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -90,6 +92,7 @@
             height: 45px;
             width: auto;
         }
+
 
         .about-section {
             background-color: #fff;
@@ -283,67 +286,6 @@
                 width: 80%;
             }
         }
-
-        /* Additional styles for buttons */
-        .MiddleSec {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-            position: relative;
-            text-align: center;
-        }
-
-        .image-container {
-            position: relative;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
-
-        .text2 {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            text-align: center;
-        }
-
-        .Menbutton {
-         background-color: #000;
-         color: #fff;
-         padding: 10px 20px;
-         border: none;
-         border-radius: 5px;
-         cursor: pointer;
-         margin-top: 10px; /* Änderung der Position */
-        }
-
-        .Menbutton:hover {
-        background-color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .text2 {
-            top: 30%; /* Änderung der Position */
-        }
-
-        }
-
-        @media (max-width: 480px) {
-        .text2 {
-            top: 40%; /* Änderung der Position */
-         }
-
-        .Menbutton {
-         padding: 8px 16px;
-
-         }
-
-        }
     </style>
 </head>
 <body>
@@ -373,7 +315,7 @@
                 <img class="HopePage1" src="VOID122/html/bilder/HompepagePhoto1.png" alt="Homepage Photo">
                 <h2>NEW COLLECTION</h2>
                 <h3>GO WATCH</h3>
-                <button class="" type="productbutton" onclick="location.href='VOID122/html/MännerShop.html'">NEW PRODUCTS</button>
+                <button class="Menbutton" type="button" onclick="location.href='VOID122/html/MännerShop.html'">NEW PRODUCTS</button>
             </div>
         </section>
 
