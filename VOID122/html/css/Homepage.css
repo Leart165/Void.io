@@ -41,6 +41,9 @@ nav {
     display: flex;
     justify-content: center;
     flex: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-left a, .nav-right a {
@@ -70,16 +73,14 @@ nav {
 .Logo {
     height: 45px;
     width: auto;
-    margin-right: 55px; /* Adjusted for fixed navigation bar */
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px; 
-    margin-top: 55px; 
-    padding: 0; 
+    height: 100px; /* Adjust as needed */
+    margin-top: 55px; /* Adjust to fit your design */
 }
 
 h1 {
@@ -87,7 +88,7 @@ h1 {
     font-size: 15px;
     margin: 0; 
     text-align: center;
-    margin-top: 50px; 
+    margin-top: 20px; /* Adjust as needed */
 }
 
 .MiddleSec {
