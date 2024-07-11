@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VOID Products</title>
-    <link rel="stylesheet" href="VOID122/html/css/Homepage.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const section = urlParams.get('section');
-            if (section) {
-                document.querySelectorAll('.Artikel').forEach(el => el.style.display = 'none');
-                document.getElementById(section).style.display = 'block';
-            }
-        });
-    </script>
+    <link rel="stylesheet" href="css/Homepage.css">
 </head>
 <body>
     <header>
@@ -25,7 +15,7 @@
                     <a href="Produkt.html">PRODUCTS</a>
                 </div>
                 <div class="nav-center">
-                    <img class="Logo" src="VOID122/html/bilder/VOIDLOGO.png" alt="VOID Logo">
+                    <img class="Logo" src="bilder/VOIDLOGO.png" alt="VOID Logo">
                 </div>
                 <div class="nav-right">
                     <a href="Kontakt.html">KONTAKT</a>
@@ -39,7 +29,6 @@
         <section id="men" class="Artikel" style="display:none;">
             <h2>MEN</h2>
             <div class="grid-container">
-                <!-- Men products here -->
                 <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 38" data-description="Herren" data-image="bilder/MicrosoftTeams-image (16).png" data-hover-image="bilder/FrontWhite.png">
                     <img class="produkt" src="bilder/MicrosoftTeams-image (16).png">
                     <img class="produkt new-image" src="bilder/FrontWhite.png">
@@ -93,7 +82,6 @@
         <section id="kids" class="Artikel" style="display:none;">
             <h2>KIDS</h2>
             <div class="grid-container">
-                <!-- Kids products here -->
                 <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (16).png" data-hover-image="bilder/MicrosoftTeams-image (45).png">
                     <img class="produkt" src="bilder/MicrosoftTeams-image (16).png">
                     <img class="produkt new-image" src="bilder/MicrosoftTeams-image (45).png">
@@ -124,7 +112,7 @@
             <div class="footer-section notification">
                 <h6>NEVER MISS A DROP</h6>
                 <a>SIGN UP TO GET RELEASE NOTIFICATIONS.</a>
-                <form method="POST" action="VOID122/html/php/process_newsletter.php">
+                <form method="POST" action="php/process_newsletter.php">
                     <input class="Email" type="email" id="mail" name="mail" placeholder="ENTER YOUR EMAIL . . . " required>
                     <input class="Absenden" type="submit" value="GET NOTIFICATIONS">
                 </form>
@@ -153,7 +141,7 @@
             </div>
             <div class="footer-section payment">
                 <h6>PAYMENT METHODS</h6>
-                <img src="VOID122/html/bilder/Payments_photo.png" alt="Payment Methods">
+                <img src="bilder/Payments_photo.png" alt="Payment Methods">
             </div>
         </div>
         <p>&copy; 2024 VOID® Streetwear.</p>

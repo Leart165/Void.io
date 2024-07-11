@@ -55,11 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const section = urlParams.get('section');
-    
     if (section) {
-
-        document.querySelectorAll('.Artikel').forEach((el) => el.style.display = 'none');
-
+        document.querySelectorAll('.Artikel').forEach(el => el.style.display = 'none');
         document.getElementById(section).style.display = 'block';
     }
 });
