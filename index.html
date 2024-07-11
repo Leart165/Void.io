@@ -8,339 +8,340 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="VOID122/html/css/Homepage.css">
     <style>
-        /* General Styles */
-        body {
-            background-color: rgb(248, 248, 248);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+ /* General Styles */
+body {
+    background-color: rgb(248, 248, 248);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px; /* Höhe reduziert */
-            margin-top: 40px; /* Abstand nach oben reduziert */
-            padding: 0; /* Kein Padding */
-        }
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Höhe reduziert */
+    margin-top: 40px; /* Abstand nach oben reduziert */
+    padding: 0; /* Kein Padding */
+}
 
-        h1 {
-            font-family: Arial;
-            font-size: 15px;
-            margin: 0; /* Kein Abstand nach oben und unten */
-            text-align: center;
-            margin-top: 70px;
-        }
+h1 {
+    font-family: Arial;
+    font-size: 15px;
+    margin: 0; /* Kein Abstand nach oben und unten */
+    text-align: center;
+    margin-top: 70px;
+}
 
-        main {
-            flex: 1;
-            padding-top: 0; /* Kein Abstand nach oben */
-        }
+main {
+    flex: 1;
+    padding-top: 0; /* Kein Abstand nach oben */
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            height: 60px;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
 
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .nav-center {
-            display: flex;
-            justify-content: center;
-            flex: 1;
-        }
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
 
-        .nav-left a, .nav-right a {
-            font-family: Roboto, sans-serif;
-            text-decoration: none;
-            color: #000000;
-            font-size: 14px;
-            position: relative;
-        }
+.nav-left a, .nav-right a {
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    position: relative;
+}
 
-        .nav-left a:hover::after, .nav-right a:hover::after {
-            width: 100%;
-        }
+.nav-left a:hover::after, .nav-right a:hover::after {
+    width: 100%;
+}
 
-        .nav-left a::after, .nav-right a::after {
-            content: "";
-            display: block;
-            height: 2px;
-            width: 0;
-            background-color: #919191;
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
+.nav-left a::after, .nav-right a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #919191;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
 
-        .Logo {
-            height: 45px;
-            width: auto;
-        }
+.Logo {
+    height: 45px;
+    width: auto;
+}
 
-        .about-section {
-            background-color: #fff;
-            margin: 20px 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+.about-section {
+    background-color: #fff;
+    margin: 20px 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-        .contact-form-section {
-            background-color: #fff;
-            margin: 20px 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+.contact-form-section {
+    background-color: #fff;
+    margin: 20px 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        .contact-form-section h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
+.contact-form-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 
-        .contact-form-section form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-        .contact-form-section input, .contact-form-section textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+.contact-form-section input, .contact-form-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-        .contact-form-section button {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #000;
-            color: #fff;
-            cursor: pointer;
-        }
+.contact-form-section button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
 
-        .contact-form-section button:hover {
-            background-color: #333;
-        }
+.contact-form-section button:hover {
+    background-color: #333;
+}
 
-        footer {
-            background-color: rgb(247, 247, 247);
-            padding: 20px;
-            text-align: center;
-            margin-top: auto;
-            width: 100%;
-            box-sizing: border-box;
-        }
+footer {
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .footer-section {
-            flex: 1;
-            margin: 10px;
-            min-width: 200px;
-        }
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
 
-        .footer-section h6 {
-            font-family: Roboto, sans-serif;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
+.footer-section h6 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 
-        .footer-section a {
-            display: block;
-            font-family: Roboto, sans-serif;
-            font-size: 12px;
-            margin: 5px 0;
-            text-decoration: none;
-            color: #000;
-        }
+.footer-section a {
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #000;
+}
 
-        .notification form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.notification form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .Email {
-            height: 40px;
-            width: 100%;
-            max-width: 240px;
-            margin-bottom: 10px;
-        }
+.Email {
+    height: 40px;
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 10px;
+}
 
-        .Absenden {
-            height: 50px;
-            width: 100%;
-            max-width: 248px;
-        }
+.Absenden {
+    height: 50px;
+    width: 100%;
+    max-width: 248px;
+}
 
-        .payment img {
-            height: auto;
-            width: 100%;
-            max-width: 300px;
-        }
+.payment img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+}
 
-        footer p {
-            font-family: Roboto, sans-serif;
-            font-size: 10px;
-            color: #000;
-        }
+footer p {
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    color: #000;
+}
 
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-            .nav-left, .nav-right {
-                flex: 1;
-                justify-content: center;
-            }
+    .nav-left, .nav-right {
+        flex: 1;
+        justify-content: center;
+    }
 
-            .nav-center {
-                order: -1;
-            }
+    .nav-center {
+        order: -1;
+    }
 
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .footer-section {
-                margin: 20px 0;
-            }
+    .footer-section {
+        margin: 20px 0;
+    }
 
-            .Email, .Absenden {
-                width: 80%;
-            }
+    .Email, .Absenden {
+        width: 80%;
+    }
 
-            .payment img {
-                width: 80%;
-            }
+    .payment img {
+        width: 80%;
+    }
 
-            .product-details {
-                flex-direction: column;
-                align-items: center;
-            }
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .product-info {
-                margin-left: 0;
-                margin-top: 20px;
-                text-align: center;
-            }
-        }
+    .product-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
 
-        @media (max-width: 480px) {
-            .nav-left, .nav-right {
-                gap: 10px;
-            }
+@media (max-width: 480px) {
+    .nav-left, .nav-right {
+        gap: 10px;
+    }
 
-            .nav-left a, .nav-right a {
-                font-size: 12px;
-            }
+    .nav-left a, .nav-right a {
+        font-size: 12px;
+    }
 
-            .nav-center img {
-                height: 35px;
-            }
+    .nav-center img {
+        height: 35px;
+    }
 
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .footer-section {
-                margin: 20px 0;
-            }
+    .footer-section {
+        margin: 20px 0;
+    }
 
-            .Email, .Absenden {
-                width: 80%;
-            }
+    .Email, .Absenden {
+        width: 80%;
+    }
 
-            .payment img {
-                width: 80%;
-            }
-        }
+    .payment img {
+        width: 80%;
+    }
+}
 
-        /* Additional styles for buttons */
-        .MiddleSec {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-            position: relative;
-            text-align: center;
-        }
+/* Additional styles for buttons */
+.MiddleSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
 
-        .image-container {
-            position: relative;
-        }
+.image-container {
+    position: relative;
+}
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
+.image-container img {
+    width: 100%;
+    height: auto;
+}
 
-        .text2 {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            text-align: center;
-        }
+.text2 {
+    position: absolute;
+    top: 25%; /* Änderung der Position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
 
-        .Menbutton {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
+.Menbutton {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Änderung der Position */
+}
 
-        .Menbutton:hover {
-            background-color: #333;
-        }
+.Menbutton:hover {
+    background-color: #333;
+}
 
-        @media (max-width: 768px) {
-            .text2 {
-                top: 50%;
-            }
-        }
+@media (max-width: 768px) {
+    .text2 {
+        top: 30%; /* Änderung der Position */
+    }
+}
 
-        @media (max-width: 480px) {
-            .text2 {
-                top: 60%;
-            }
+@media (max-width: 480px) {
+    .text2 {
+        top: 40%; /* Änderung der Position */
+    }
 
-            .Menbutton {
-                padding: 8px 16px;
-            }
-        }
+    .Menbutton {
+        padding: 8px 16px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -370,7 +371,7 @@
                 <img class="HopePage1" src="VOID122/html/bilder/HompepagePhoto1.png" alt="Homepage Photo">
                 <h2>NEW COLLECTION</h2>
                 <h3>GO WATCH</h3>
-                <button class="Menbutton" type="button" onclick="location.href='VOID122/html/MännerShop.html'">NEW PRODUCTS</button>
+                <button class="" type="productbutton" onclick="location.href='VOID122/html/MännerShop.html'">NEW PRODUCTS</button>
             </div>
         </section>
 
