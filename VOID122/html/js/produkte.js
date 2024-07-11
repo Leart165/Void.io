@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById("background-video");
     var toggleButton = document.getElementById("toggle-video");
     var volumeButton = document.getElementById("volume-button");
-    
+
     toggleButton.addEventListener("click", function() {
         if (video.paused) {
             video.play();
@@ -21,6 +21,34 @@ document.addEventListener("DOMContentLoaded", function() {
             video.muted = true;
             volumeButton.innerHTML = '<i class="fa-solid fa-volume-off"></i>';
         }
+    });
+
+    var selectedCategory = localStorage.getItem('selectedCategory');
+
+    if (selectedCategory && selectedCategory !== 'all') {
+        filterProducts(selectedCategory);
+    }
+
+    function filterProducts(category) {
+        var allProducts = document.querySelectorAll('.Tshirt');
+
+        allProducts.forEach(function(product) {
+            var productCategory = product.dataset.category;
+
+            if (productCategory === category) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    var navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            localStorage.setItem('selectedCategory', 'all');
+        });
     });
 
     document.querySelectorAll('.Tshirt').forEach(item => {
@@ -48,37 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const hoverImg = item.querySelector('.produkt.new-image');
             img.style.opacity = '1';
             hoverImg.style.opacity = '0';
-        });
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    var selectedCategory = localStorage.getItem('selectedCategory');
-
-    if (selectedCategory && selectedCategory !== 'all') {
-        filterProducts(selectedCategory);
-    }
-
-    function filterProducts(category) {
-        var allProducts = document.querySelectorAll('.Tshirt');
-
-        allProducts.forEach(function(product) {
-            var productCategory = product.dataset.category;
-
-            if (productCategory === category) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
-
-    var navLinks = document.querySelectorAll('nav a');
-
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-            localStorage.setItem('selectedCategory', 'all');
         });
     });
 });
