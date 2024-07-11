@@ -7,7 +7,37 @@
     <link rel="icon" href="bilder/VOIDLOGOBAR.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/produkt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var selectedCategory = localStorage.getItem('selectedCategory');
+
+            if (selectedCategory && selectedCategory !== 'all') {
+                filterProducts(selectedCategory);
+            }
+
+            function filterProducts(category) {
+                var allProducts = document.querySelectorAll('.Tshirt');
+
+                allProducts.forEach(function(product) {
+                    var productCategory = product.dataset.category;
+
+                    if (productCategory === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+
+            var navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    localStorage.setItem('selectedCategory', 'all');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -15,7 +45,7 @@
             <nav>
                 <div class="nav-left">
                     <a href="index.html">HOME</a>
-                    <a href="produkt.html">PRODUCTS</a>
+                    <a href="produkt.html" onclick="localStorage.setItem('selectedCategory', 'all');">PRODUCTS</a>
                 </div>
                 <div class="nav-center">
                     <img class="Logo" src="bilder/VOIDLOGO.png" alt="VOID Logo">

@@ -53,40 +53,42 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-    function setCategory(category) {
-        localStorage.setItem('selectedCategory', category);
-    }
 
 
 
 
-
-        document.addEventListener("DOMContentLoaded", function() {
-            var selectedCategory = localStorage.getItem('selectedCategory');
-
-            if (selectedCategory) {
-                filterProducts(selectedCategory);
+            function setCategory(category) {
+                localStorage.setItem('selectedCategory', category);
             }
 
-            function filterProducts(category) {
-                var allProducts = document.querySelectorAll('.Tshirt');
 
-                allProducts.forEach(function(product) {
-                    var productCategory = product.dataset.category;
 
-                    if (category === 'all' || productCategory === category) {
-                        product.style.display = 'block';
-                    } else {
-                        product.style.display = 'none';
-                    }
-                });
-            }
-
-            var navLinks = document.querySelectorAll('nav a');
-
-            navLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    localStorage.setItem('selectedCategory', 'all');
+            document.addEventListener("DOMContentLoaded", function() {
+                var selectedCategory = localStorage.getItem('selectedCategory');
+    
+                if (selectedCategory && selectedCategory !== 'all') {
+                    filterProducts(selectedCategory);
+                }
+    
+                function filterProducts(category) {
+                    var allProducts = document.querySelectorAll('.Tshirt');
+    
+                    allProducts.forEach(function(product) {
+                        var productCategory = product.dataset.category;
+    
+                        if (productCategory === category) {
+                            product.style.display = 'block';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    });
+                }
+    
+                var navLinks = document.querySelectorAll('nav a');
+    
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        localStorage.setItem('selectedCategory', 'all');
+                    });
                 });
             });
-        });
