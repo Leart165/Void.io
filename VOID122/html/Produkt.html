@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOID Products</title>
+    <title>VOID</title>
+    <link rel="icon" href="bilder/VOIDLOGOBAR.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/produkt.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -23,12 +24,20 @@
                 </div>
             </nav>
         </section>
+
         <h1>RELEASE DATE 12.07.2024</h1>
     </header>
-    
+
     <main>
-        <section id="men" class="Artikel" style="display:none;">
-            <h2>MEN</h2>
+        <section class="Video">
+            <video id="background-video" src="video/Sequenz 41.mp4" autoplay muted loop></video>
+            <button id="toggle-video"><i class="fa-regular fa-circle-pause"></i></button>
+            <button id="volume-button"><i class="fa-solid fa-volume-low"></i></button>
+        </section>
+
+        <section class="Artikel">
+            <h2>NEW ARRIVALS COMING</h2>
+            <h3>MEN</h3>
             <div class="grid-container">
                 <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 38" data-description="Herren" data-image="bilder/MicrosoftTeams-image (16).png" data-hover-image="bilder/FrontWhite.png">
                     <img class="produkt" src="bilder/MicrosoftTeams-image (16).png">
@@ -53,8 +62,9 @@
                 </div>
             </div>
         </section>
-        <section id="women" class="Artikel" style="display:none;">
-            <h2>WOMEN</h2>
+
+        <section class="Artikel">
+            <h3>WOMEN</h3>
             <div class="grid-container">
                 <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 55" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (16).png" data-hover-image="bilder/MicrosoftTeams-image (32).png">
                     <img class="produkt" src="bilder/MicrosoftTeams-image (16).png">
@@ -79,8 +89,9 @@
                 </div>
             </div>
         </section>
-        <section id="kids" class="Artikel" style="display:none;">
-            <h2>KIDS</h2>
+
+        <section class="Artikel">
+            <h3>KIDS</h3>
             <div class="grid-container">
                 <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (16).png" data-hover-image="bilder/MicrosoftTeams-image (45).png">
                     <img class="produkt" src="bilder/MicrosoftTeams-image (16).png">
@@ -94,7 +105,7 @@
                     <img class="produkt new-image" src="bilder/MicrosoftTeams-image (52).png">
                     <a>VOID Pink T-Shirt</a> <br>
                     <a>Kinder</a> <br>
-                    <a>CHF 23</a> <br>
+                    <a>CHF 120</a> <br>
                 </div>
                 <div class="Tshirt" data-name="VOID Blue T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (49).png" data-hover-image="bilder/MicrosoftTeams-image (50).png">
                     <img class="produkt" src="bilder/MicrosoftTeams-image (49).png">
@@ -146,5 +157,61 @@
         </div>
         <p>&copy; 2024 VOID® Streetwear.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("background-video");
+            var toggleButton = document.getElementById("toggle-video");
+            var volumeButton = document.getElementById("volume-button");
+            
+            toggleButton.addEventListener("click", function() {
+                if (video.paused) {
+                    video.play();
+                    toggleButton.innerHTML = '<i class="fa-regular fa-circle-pause"></i>';
+                } else {
+                    video.pause();
+                    toggleButton.innerHTML = '<i class="fa-regular fa-circle-play"></i>';
+                }
+            });
+
+            volumeButton.addEventListener("click", function() {
+                if (video.muted) {
+                    video.muted = false;
+                    volumeButton.innerHTML = '<i class="fa-solid fa-volume-low"></i>';
+                } else {
+                    video.muted = true;
+                    volumeButton.innerHTML = '<i class="fa-solid fa-volume-off"></i>';
+                }
+            });
+
+            document.querySelectorAll('.Tshirt').forEach(item => {
+                item.addEventListener('click', event => {
+                    const product = {
+                        name: item.dataset.name,
+                        image: item.dataset.image,
+                        description: item.dataset.description,
+                        price: item.dataset.price
+                    };
+
+                    localStorage.setItem('selectedProduct', JSON.stringify(product));
+                    window.location.href = 'produktdetail.html';
+                });
+
+                item.addEventListener('mouseover', event => {
+                    const img = item.querySelector('.produkt');
+                    const hoverImg = item.querySelector('.produkt.new-image');
+                    img.style.opacity = '0';
+                    hoverImg.style.opacity = '1';
+                });
+
+                item.addEventListener('mouseout', event => {
+                    const img = item.querySelector('.produkt');
+                    const hoverImg = item.querySelector('.produkt.new-image');
+                    img.style.opacity = '1';
+                    hoverImg.style.opacity = '0';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
