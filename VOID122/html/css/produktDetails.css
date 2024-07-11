@@ -1,0 +1,312 @@
+        /* General Styles */
+        body {
+            background-color: rgb(248, 248, 248);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .Navigation {
+            background-color: #ffffff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .nav-left a, .nav-right a {
+            font-family: Roboto, sans-serif;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .nav-left a:hover::after, .nav-right a:hover::after {
+            width: 100%;
+        }
+
+        .nav-left a::after, .nav-right a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: #919191;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .Logo {
+            height: 45px;
+            width: auto;
+            margin-right: 55px; /* Adjusted for fixed navigation bar */
+        }
+
+        .product-detail-container {
+            display: flex;
+            flex-direction: column; /* Changed to column for mobile-first approach */
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 100px auto 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-detail {
+            display: flex;
+            flex-direction: column; /* Changed to column for mobile-first approach */
+            align-items: center; /* Center align items for mobile */
+            flex: 1;
+            width: 100%;
+        }
+
+        .product-detail img {
+            max-width: 400px; /* Increase the max-width to make the image wider */
+            width: 100%; /* Ensure the image takes up the full width of its container */
+            height: auto;
+            margin-bottom: 20px; /* Add margin-bottom for spacing in mobile view */
+        }
+
+        .product-info {
+            flex: 1;
+            width: 100%;
+            text-align: center; /* Center align text for mobile */
+        }
+
+        .product-info h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .product-info p {
+            margin-bottom: 10px;
+        }
+
+        .product-info .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #333;
+        }
+
+        .summary-section {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .order-form input,
+        .order-form select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .order-form button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: rgb(247, 247, 247);
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-section h6 {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            display: block;
+            font-family: Roboto, sans-serif;
+            font-size: 12px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .notification form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .Email {
+            height: 40px;
+            width: 100%;
+            max-width: 240px;
+            margin-bottom: 10px;
+        }
+
+        .Absenden {
+            height: 50px;
+            width: 100%;
+            max-width: 248px;
+        }
+
+        .payment img {
+            height: auto;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        footer p {
+            font-family: Roboto, sans-serif;
+            font-size: 10px;
+            color: #000;
+        }
+
+        @media (min-width: 768px) {
+            .product-detail-container {
+                flex-direction: row; /* Change to row for larger screens */
+                align-items: flex-start; /* Align items to flex-start for larger screens */
+            }
+
+            .product-detail {
+                flex-direction: row; /* Change to row for larger screens */
+                align-items: flex-start; /* Align items to flex-start for larger screens */
+                width: auto; /* Reset width for larger screens */
+            }
+
+            .product-detail img {
+                margin-right: 20px; /* Add margin-right for spacing in larger screens */
+                margin-bottom: 0; /* Remove margin-bottom for larger screens */
+            }
+
+            .product-info {
+                text-align: left; /* Align text to left for larger screens */
+            }
+
+            .summary-section {
+                width: 300px; /* Set fixed width for larger screens */
+                margin-top: 0; /* Remove margin-top for larger screens */
+                margin-left: 20px; /* Add margin-left for spacing in larger screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-left, .nav-right {
+                gap: 10px;
+            }
+
+            .nav-left a, .nav-right a {
+                font-size: 12px;
+            }
+
+            .nav-center img {
+                height: 35px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                margin: 20px 0;
+            }
+
+            .Email, .Absenden {
+                width: 80%;
+            }
+
+            .payment img {
+                width: 80%;
+            }
+        }
