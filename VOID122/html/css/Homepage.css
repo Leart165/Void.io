@@ -41,9 +41,6 @@ nav {
     display: flex;
     justify-content: center;
     flex: 1;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .nav-left a, .nav-right a {
@@ -73,16 +70,16 @@ nav {
 .Logo {
     height: 45px;
     width: auto;
-    margin-right: 55px;
+    margin-left: -60px; 
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px; /* Adjust as needed */
-    margin-top: 60px; /* Adjust to fit your design */
-    padding: 0; /* No padding */
+    height: 40px; 
+    margin-top: 50px; 
+    padding: 0; 
 }
 
 h1 {
@@ -90,7 +87,7 @@ h1 {
     font-size: 15px;
     margin: 0; 
     text-align: center;
-    margin-top: 40px; /* Adjust as needed */
+    margin-top: 65px;
 }
 
 .MiddleSec {
@@ -287,8 +284,6 @@ footer p {
 
     .nav-center {
         order: -1;
-        position: static;
-        transform: none;
     }
 
     .footer-container {
