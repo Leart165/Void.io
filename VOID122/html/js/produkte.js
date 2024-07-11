@@ -52,3 +52,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get('section');
+        
+        if (section) {
+            // Hide all sections
+            document.querySelectorAll('.Artikel').forEach((el) => el.style.display = 'none');
+            
+            // Show the relevant section
+            document.getElementById(section).style.display = 'block';
+        }
+    });
+
