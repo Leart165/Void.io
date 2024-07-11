@@ -106,21 +106,6 @@ h1 {
     margin-bottom: 50px;
 }
 
-.Menbutton {
-    background-color: #ffffff;
-    font-family: Roboto, sans-serif;
-    border: none;
-    padding: 15px 45px;
-    font-size: 21px;
-    font-weight: bold;
-    transition: 0.3s;
-    margin: 10px;
-    z-index: 1;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .text2 h2 {
     color: #ffffff;
