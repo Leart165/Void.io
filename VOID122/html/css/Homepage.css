@@ -73,14 +73,16 @@ nav {
 .Logo {
     height: 45px;
     width: auto;
+    margin-right: 55px;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; /* Adjust as needed */
-    margin-top: 55px; /* Adjust to fit your design */
+    height: 40px; /* Adjust as needed */
+    margin-top: 60px; /* Adjust to fit your design */
+    padding: 0; /* No padding */
 }
 
 h1 {
@@ -93,7 +95,7 @@ h1 {
 
 .MiddleSec {
     text-align: center;
-    margin-top: 35px;
+    margin-top: 50px;
 }
 
 .image-container {
