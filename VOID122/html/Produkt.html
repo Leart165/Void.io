@@ -97,51 +97,63 @@
             text-align: center;
         }
 
-        .about-section {
-            background-color: #fff;
-            margin: 20px 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .Video {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
 
-        .contact-form-section {
-            background-color: #fff;
-            margin: 20px 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .contact-form-section h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-
-        .contact-form-section form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-form-section input, .contact-form-section textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form-section button {
-            padding: 10px;
+        #toggle-video, #volume-button {
+            background: none;
             border: none;
-            border-radius: 5px;
-            background-color: #000;
-            color: #fff;
+            padding: 0;
+            font-size: 3em;
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            color: white;
+        }
+
+        #volume-button {
+            top: 50%;
+        }
+
+        .Artikel {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .Tshirt {
+            text-align: center;
             cursor: pointer;
         }
 
-        .contact-form-section button:hover {
-            background-color: #333;
+        .WhiteTshirt {
+            width: 100%;
+            height: auto;
         }
 
         footer {
