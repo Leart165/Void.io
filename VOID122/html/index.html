@@ -98,44 +98,58 @@
             text-align: center;
         }
 
-        .MiddleSec, .AboutUs, .EndSec {
+        .about-section {
+            background-color: #fff;
+            margin: 20px 20px;
             padding: 20px;
-        }
-
-        .image-container {
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        .HopePage1 {
-            max-width: 100%;
-            height: auto;
+        .contact-form-section {
+            background-color: #fff;
+            margin: 20px 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .Menbutton, .overlay-button {
-            margin-top: 10px;
-            padding: 10px 20px;
+        .contact-form-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form-section input, .contact-form-section textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form-section button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
             background-color: #000;
             color: #fff;
-            border: none;
             cursor: pointer;
-            font-size: 14px;
         }
 
-        .grid-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .backgroundtshirtpictures {
-            max-width: 100%;
-            height: auto;
+        .contact-form-section button:hover {
+            background-color: #333;
         }
 
         footer {
             background-color: rgb(247, 247, 247);
             padding: 20px;
             text-align: center;
+            margin-top: auto;
             width: 100%;
             box-sizing: border-box;
         }
@@ -276,6 +290,7 @@
                 width: 80%;
             }
         }
+        
     </style>
 </head>
 <body>
