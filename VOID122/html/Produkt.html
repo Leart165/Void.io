@@ -19,6 +19,23 @@
             min-height: 100vh;
         }
 
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px; /* Höhe reduziert */
+            margin-top: 55px; /* Abstand nach oben reduziert */
+            padding: 0; /* Kein Padding */
+        }
+
+        h1 {
+            font-family: Arial;
+            font-size: 15px;
+            margin: 0; /* Kein Abstand nach oben und unten */
+            text-align: center;
+            margin-top: 50px; /* Abstand nach oben */
+        }
+
         main {
             flex: 1;
         }
@@ -33,80 +50,54 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+        }
 
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-        header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px; /* Höhe reduziert */
-    margin-top: 55px; /* Abstand nach oben reduziert */
-    padding: 0; /* Kein Padding */
-}
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
 
-h1 {
-    font-family: Arial;
-    font-size: 15px;
-    margin: 0; /* Kein Abstand nach oben und unten */
-    text-align: center;
-    margin-top: 50px; /* Abstand nach oben */
-}
+        .nav-left a, .nav-right a {
+            font-family: Roboto, sans-serif;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            position: relative;
+        }
 
-nav {
-    display: flex;
-    justify-content: center; /* Center the logo */
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
-    position: relative;
-}
+        .nav-left a:hover::after, .nav-right a:hover::after {
+            width: 100%;
+        }
 
-.nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
+        .nav-left a::after, .nav-right a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: #919191;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
 
-.nav-left {
-    left: 20px;
-}
-
-.nav-right {
-    right: 20px;
-}
-
-.nav-left a, .nav-right a {
-    font-family: Roboto, sans-serif;
-    text-decoration: none;
-    color: #000000;
-    font-size: 14px;
-    position: relative;
-}
-
-.nav-left a:hover::after, .nav-right a:hover::after {
-    width: 100%;
-}
-
-.nav-left a::after, .nav-right a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #919191;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.Logo {
-    height: 45px;
-    width: auto;
-}
-
+        .Logo {
+            height: 45px;
+            width: auto;
+        }
 
         .Video {
             position: relative;
@@ -252,6 +243,7 @@ nav {
             color: #000;
         }
 
+        /* Styles for Mobile */
         @media (max-width: 768px) {
             nav {
                 flex-wrap: wrap;
@@ -259,54 +251,51 @@ nav {
             }
 
             .nav-left, .nav-right {
-                flex: 1;
-                justify-content: center;
+                display: none;
             }
 
             .nav-center {
                 order: -1;
             }
 
-            .footer-container {
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+            }
+
+            .nav-menu {
+                display: none;
                 flex-direction: column;
                 align-items: center;
+                background-color: #ffffff;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
-            .footer-section {
-                margin: 20px 0;
-            }
-
-            .Email, .Absenden {
-                width: 80%;
-            }
-
-            .payment img {
-                width: 80%;
-            }
-
-            .product-details {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .product-info {
-                margin-left: 0;
-                margin-top: 20px;
+            .nav-menu a {
+                padding: 10px 20px;
+                width: 100%;
                 text-align: center;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .nav-menu a:hover {
+                background-color: #f9f9f9;
             }
         }
 
         @media (max-width: 480px) {
             .Video {
                 padding-top: 177.78%; /* 9:16 Aspect Ratio */
-            }
-
-            .nav-left, .nav-right {
-                gap: 10px;
-            }
-
-            .nav-left a, .nav-right a {
-                font-size: 12px;
             }
 
             .nav-center img {
@@ -346,7 +335,15 @@ nav {
                 <div class="nav-right">
                     <a href="Kontakt.html">KONTAKT</a>
                 </div>
+                <div class="hamburger-menu">
+                    <i class="fa fa-bars"></i>
+                </div>
             </nav>
+            <div class="nav-menu">
+                <a href="index.html">HOME</a>
+                <a href="Produkt.html">PRODUCTS</a>
+                <a href="Kontakt.html">KONTAKT</a>
+            </div>
         </section>
 
         <h1>RELEASE DATE 12.07.2024</h1>
@@ -534,6 +531,13 @@ nav {
                     img.style.opacity = '1';
                     hoverImg.style.opacity = '0';
                 });
+            });
+
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
             });
         });
     </script>
