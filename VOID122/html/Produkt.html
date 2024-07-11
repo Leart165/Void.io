@@ -149,11 +149,24 @@
         .Tshirt {
             text-align: center;
             cursor: pointer;
+            position: relative;
         }
 
         .WhiteTshirt {
             width: 100%;
             height: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .WhiteTshirt.new-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .Tshirt:hover .WhiteTshirt.new-image {
+            opacity: 1;
         }
 
         footer {
@@ -334,20 +347,23 @@
             <h2>NEW ARRIVALS COMING</h2>
             <h3>MEN</h3>
             <div class="grid-container">
-                <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 38" data-description="Herren" data-image="bilder/MicrosoftTeams-image (16).png">
+                <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 38" data-description="Herren" data-image="bilder/MicrosoftTeams-image (16).png" data-hover-image="bilder/MicrosoftTeams-image (17).png">
                     <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (16).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (17).png">
                     <a>VOID White T-Shirt</a> <br>
                     <a>Herren</a> <br>
                     <a>CHF 38</a> <br>
                 </div>
-                <div class="Tshirt" data-name="VOID Black T-Shirt" data-price="CHF 38" data-description="Herren" data-image="bilder/MicrosoftTeams-image (17).png">
+                <div class="Tshirt" data-name="VOID Black T-Shirt" data-price="CHF 38" data-description="Herren" data-image="bilder/MicrosoftTeams-image (18).png" data-hover-image="bilder/MicrosoftTeams-image (19).png">
                     <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (18).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (19).png">
                     <a>VOID Black T-Shirt</a> <br>
                     <a>Herren</a> <br>
                     <a>CHF 38</a> <br>
                 </div>
-                <div class="Tshirt" data-name="VOID Brazil Jersey" data-price="CHF 100" data-description="Herren" data-image="bilder/MicrosoftTeams-image (23).png">
-                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (24).png">
+                <div class="Tshirt" data-name="VOID Brazil Jersey" data-price="CHF 100" data-description="Herren" data-image="bilder/MicrosoftTeams-image (23).png" data-hover-image="bilder/MicrosoftTeams-image (24).png">
+                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (23).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (24).png">
                     <a>VOID Brazil Jersey</a> <br>
                     <a>Herren</a> <br>
                     <a>CHF 100</a> <br>
@@ -358,20 +374,23 @@
         <section class="Artikel">
             <h3>WOMEN</h3>
             <div class="grid-container">
-                <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 55" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (16).png">
+                <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 55" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (32).png" data-hover-image="bilder/MicrosoftTeams-image (33).png">
                     <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (32).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (33).png">
                     <a>VOID White T-Shirt</a> <br>
                     <a>Frauen</a> <br>
                     <a>CHF 55</a> <br>
                 </div>
-                <div class="Tshirt" data-name="VOID Vintage Hoodie" data-price="CHF 68" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (38).png">
-                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (39).png">
+                <div class="Tshirt" data-name="VOID Vintage Hoodie" data-price="CHF 68" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (38).png" data-hover-image="bilder/MicrosoftTeams-image (39).png">
+                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (38).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (39).png">
                     <a>VOID Vintage Hoodie</a> <br>
                     <a>Frauen</a> <br>
                     <a>CHF 68</a> <br>
                 </div>
-                <div class="Tshirt" data-name="VOID Carlifonia Hoodie" data-price="CHF 68" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (25).png">
+                <div class="Tshirt" data-name="VOID Carlifonia Hoodie" data-price="CHF 68" data-description="Frauen" data-image="bilder/MicrosoftTeams-image (25).png" data-hover-image="bilder/MicrosoftTeams-image (26).png">
                     <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (25).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (26).png">
                     <a>VOID Carlifonia Hoodie</a> <br>
                     <a>Herren</a> <br>
                     <a>CHF 68</a> <br>
@@ -382,21 +401,24 @@
         <section class="Artikel">
             <h3>KIDS</h3>
             <div class="grid-container">
-                <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (16).png">
+                <div class="Tshirt" data-name="VOID White T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (45).png" data-hover-image="bilder/MicrosoftTeams-image (46).png">
                     <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (45).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (46).png">
                     <a>VOID White T-Shirt</a> <br>
                     <a>Kinder</a> <br>
                     <a>CHF 20</a> <br>
                 </div>
-                <div class="Tshirt" data-name="VOID Pink T-Shirt" data-price="CHF 23" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (51).png">
-                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (52).png">
+                <div class="Tshirt" data-name="VOID Pink T-Shirt" data-price="CHF 23" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (51).png" data-hover-image="bilder/MicrosoftTeams-image (52).png">
+                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (51).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (52).png">
                     <a>VOID Pink T-Shirt</a> <br>
                     <a>Kinder</a> <br>
                     <a>CHF 120</a> <br>
                 </div>
-                <div class="Tshirt" data-name="VOID Blue T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (49).png">
-                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (50).png">
-                    <a>VOID Bkue T-Shirt</a> <br>
+                <div class="Tshirt" data-name="VOID Blue T-Shirt" data-price="CHF 20" data-description="Kinder" data-image="bilder/MicrosoftTeams-image (49).png" data-hover-image="bilder/MicrosoftTeams-image (50).png">
+                    <img class="WhiteTshirt" src="bilder/MicrosoftTeams-image (49).png">
+                    <img class="WhiteTshirt new-image" src="bilder/MicrosoftTeams-image (50).png">
+                    <a>VOID Blue T-Shirt</a> <br>
                     <a>Kinder</a> <br>
                     <a>CHF 20</a> <br>
                 </div>
@@ -484,66 +506,6 @@
                 });
             });
         });
-
-        function showNewImage() {
-            document.getElementById("originalImage").style.display = "none";
-            document.getElementById("newImage").style.display = "block";
-        }
-
-        function showOriginalImage() {
-            document.getElementById("originalImage").style.display = "block";
-            document.getElementById("newImage").style.display = "none";
-        }
-
-        function showNewImage2() {
-            document.getElementById("originalImage2").style.display = "none";
-            document.getElementById("newImage2").style.display = "block";
-        }
-
-        function showOriginalImage2() {
-            document.getElementById("originalImage2").style.display = "block";
-            document.getElementById("newImage2").style.display = "none";
-        }
-
-        function showNewImage3() {
-            document.getElementById("originalImage3").style.display = "none";
-            document.getElementById("newImage3").style.display = "block";
-        }
-
-        function showOriginalImage3() {
-            document.getElementById("originalImage3").style.display = "block";
-            document.getElementById("newImage3").style.display = "none";
-        }
-
-        function showNewImage4() {
-            document.getElementById("originalImage4").style.display = "none";
-            document.getElementById("newImage4").style.display = "block";
-        }
-
-        function showOriginalImage4() {
-            document.getElementById("originalImage4").style.display = "block";
-            document.getElementById("newImage4").style.display = "none";
-        }
-
-        function showNewImage5() {
-            document.getElementById("originalImage5").style.display = "none";
-            document.getElementById("newImage5").style.display = "block";
-        }
-
-        function showOriginalImage5() {
-            document.getElementById("originalImage5").style.display = "block";
-            document.getElementById("newImage5").style.display = "none";
-        }
-
-        function showNewImage6() {
-            document.getElementById("originalImage6").style.display = "none";
-            document.getElementById("newImage6").style.display = "block";
-        }
-
-        function showOriginalImage6() {
-            document.getElementById("originalImage6").style.display = "block";
-            document.getElementById("newImage6").style.display = "none";
-        }
     </script>
 </body>
 </html>
