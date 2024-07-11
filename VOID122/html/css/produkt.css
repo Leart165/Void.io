@@ -90,98 +90,77 @@ h1 {
     margin-top: 65px;
 }
 
-.MiddleSec {
-    text-align: center;
+.Video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 64.25%; 
     margin-top: 50px;
 }
 
-.image-container {
-    position: relative;
-    text-align: center;
-}
-
-.HopePage1 {
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1205px;
-    margin-bottom: 50px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.text2 h2 {
-    color: #ffffff;
-    font-family: Roboto, sans-serif;
-    font-size: 20px;
+#toggle-video, #volume-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 3em;
+    cursor: pointer;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 10%;
     transform: translate(-50%, -50%);
+    z-index: 3;
+    color: white;
 }
 
-.text2 h3 {
-    color: #ffffff;
-    font-family: Roboto, sans-serif;
-    font-size: 50px;
-    position: absolute;
+#volume-button {
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-h4 {
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    font-size: 35px;
-    margin-top: 50px;
-}
-
-p {
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    font-size: 15px;
-    margin: 0 20px;
-}
-
-.EndSec {
-    margin-top: 100px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
+.Artikel {
+    margin-top: 20px;
     padding: 20px;
-}
-
-.text3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgb(255, 255, 255);
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
-.backgroundtshirtpictures {
+.Tshirt {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.produkt {
     width: 100%;
     height: auto;
+    transition: opacity 0.3s ease;
 }
 
-.overlay-button {
+.produkt.new-image {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
-.overlay-button:hover {
-    background-color: rgba(255, 255, 255, 1);
+.Tshirt:hover .new-image {
+    opacity: 1;
 }
 
 footer {
@@ -300,6 +279,10 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    .Video {
+        padding-top: 177.78%; /* 9:16 Aspect Ratio */
+    }
+
     .nav-left, .nav-right {
         gap: 10px;
     }
@@ -310,11 +293,6 @@ footer p {
 
     .nav-center img {
         height: 35px;
-    }
-
-    .HopePage1 {
-        height: auto;
-        max-width: 100%;
     }
 
     .footer-container {
