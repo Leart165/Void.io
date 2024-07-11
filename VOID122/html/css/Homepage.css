@@ -70,7 +70,7 @@ nav {
 .Logo {
     height: 45px;
     width: auto;
-    margin-right: 55px;
+    margin-right: 55px; /* Adjusted for fixed navigation bar */
 }
 
 header {
