@@ -70,7 +70,7 @@ nav {
 .Logo {
     height: 45px;
     width: auto;
-    margin-left: -60px; 
+    margin-right: 55px; /* Adjusted for fixed navigation bar */
 }
 
 header {
@@ -78,7 +78,8 @@ header {
     justify-content: center;
     align-items: center;
     height: 40px; 
-    margin-top: 70px; 
+    margin-top: 55px; 
+    padding: 0; 
 }
 
 h1 {
@@ -86,7 +87,7 @@ h1 {
     font-size: 15px;
     margin: 0; 
     text-align: center;
-    margin-top: 65px;
+    margin-top: 50px; 
 }
 
 .MiddleSec {
