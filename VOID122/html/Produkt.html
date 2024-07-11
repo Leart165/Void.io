@@ -19,23 +19,6 @@
             min-height: 100vh;
         }
 
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px; /* Höhe reduziert */
-            margin-top: 55px; /* Abstand nach oben reduziert */
-            padding: 0; /* Kein Padding */
-        }
-
-        h1 {
-            font-family: Arial;
-            font-size: 15px;
-            margin: 0; /* Kein Abstand nach oben und unten */
-            text-align: center;
-            margin-top: 50px; /* Abstand nach oben */
-        }
-
         main {
             flex: 1;
         }
@@ -97,6 +80,23 @@
         .Logo {
             height: 45px;
             width: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px; /* Höhe reduziert */
+            margin-top: 50px; /* Abstand nach oben reduziert */
+            padding: 0; /* Kein Padding */
+        }
+
+        h1 {
+            font-family: Arial;
+            font-size: 15px;
+            margin: 0; /* Kein Abstand nach oben und unten */
+            text-align: center;
+            margin-top: 65px;
         }
 
         .Video {
@@ -243,7 +243,6 @@
             color: #000;
         }
 
-        /* Styles for Mobile */
         @media (max-width: 768px) {
             nav {
                 flex-wrap: wrap;
@@ -251,51 +250,54 @@
             }
 
             .nav-left, .nav-right {
-                display: none;
+                flex: 1;
+                justify-content: center;
             }
 
             .nav-center {
                 order: -1;
             }
 
-            .hamburger-menu {
-                display: block;
-                cursor: pointer;
-                font-size: 24px;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 20px;
-            }
-
-            .nav-menu {
-                display: none;
+            .footer-container {
                 flex-direction: column;
                 align-items: center;
-                background-color: #ffffff;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                z-index: 1000;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
-            .nav-menu a {
-                padding: 10px 20px;
-                width: 100%;
+            .footer-section {
+                margin: 20px 0;
+            }
+
+            .Email, .Absenden {
+                width: 80%;
+            }
+
+            .payment img {
+                width: 80%;
+            }
+
+            .product-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-info {
+                margin-left: 0;
+                margin-top: 20px;
                 text-align: center;
-                border-bottom: 1px solid #eeeeee;
-            }
-
-            .nav-menu a:hover {
-                background-color: #f9f9f9;
             }
         }
 
         @media (max-width: 480px) {
             .Video {
                 padding-top: 177.78%; /* 9:16 Aspect Ratio */
+            }
+
+            .nav-left, .nav-right {
+                gap: 10px;
+            }
+
+            .nav-left a, .nav-right a {
+                font-size: 12px;
             }
 
             .nav-center img {
@@ -335,15 +337,7 @@
                 <div class="nav-right">
                     <a href="Kontakt.html">KONTAKT</a>
                 </div>
-                <div class="hamburger-menu">
-                    <i class="fa fa-bars"></i>
-                </div>
             </nav>
-            <div class="nav-menu">
-                <a href="index.html">HOME</a>
-                <a href="Produkt.html">PRODUCTS</a>
-                <a href="Kontakt.html">KONTAKT</a>
-            </div>
         </section>
 
         <h1>RELEASE DATE 12.07.2024</h1>
@@ -405,7 +399,7 @@
                     <img class="produkt" src="bilder/MicrosoftTeams-image (37).png">
                     <img class="produkt new-image" src="bilder/MicrosoftTeams-image (36).png">
                     <a>VOID Carlifonia Hoodie</a> <br>
-                    <a>Herren</a> <br>
+                    <a>Frauen</a> <br>
                     <a>CHF 68</a> <br>
                 </div>
             </div>
@@ -531,13 +525,6 @@
                     img.style.opacity = '1';
                     hoverImg.style.opacity = '0';
                 });
-            });
-
-            const hamburgerMenu = document.querySelector('.hamburger-menu');
-            const navMenu = document.querySelector('.nav-menu');
-
-            hamburgerMenu.addEventListener('click', () => {
-                navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
             });
         });
     </script>
