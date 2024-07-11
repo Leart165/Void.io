@@ -33,69 +33,80 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            height: 60px;
-        }
 
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .nav-center {
-            display: flex;
-            justify-content: center;
-            flex: 1;
-        }
-
-        .nav-left a, .nav-right a {
-            font-family: Roboto, sans-serif;
-            text-decoration: none;
-            color: #000000;
-            font-size: 14px;
-            position: relative;
-        }
-
-        .nav-left a:hover::after, .nav-right a:hover::after {
-            width: 100%;
-        }
-
-        .nav-left a::after, .nav-right a::after {
-            content: "";
-            display: block;
-            height: 2px;
-            width: 0;
-            background-color: #919191;
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-
-        .Logo {
-            height: 45px;
-            width: auto;
-        }
 
         header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px; /* Reduced height */
-            margin-top: 60px; /* Adjusted for fixed navigation bar */
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Höhe reduziert */
+    margin-top: 40px; /* Abstand nach oben reduziert */
+    padding: 0; /* Kein Padding */
+}
 
-        h1 {
-            font-family: Arial;
-            font-size: 15px;
-            margin: 0;
-            text-align: center;
-        }
+h1 {
+    font-family: Arial;
+    font-size: 15px;
+    margin: 0; /* Kein Abstand nach oben und unten */
+    text-align: center;
+    margin-top: 40px; /* Abstand nach oben */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    position: relative;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-left {
+    left: 20px;
+}
+
+.nav-right {
+    right: 20px;
+}
+
+.nav-left a, .nav-right a {
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    position: relative;
+}
+
+.nav-left a:hover::after, .nav-right a:hover::after {
+    width: 100%;
+}
+
+.nav-left a::after, .nav-right a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #919191;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.Logo {
+    height: 45px;
+    width: auto;
+}
+
 
         .Video {
             position: relative;
