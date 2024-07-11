@@ -106,8 +106,6 @@ h1 {
     margin-bottom: 50px;
 }
 
-
-
 .text2 h2 {
     color: #ffffff;
     font-family: Roboto, sans-serif;
@@ -312,6 +310,11 @@ footer p {
 
     .nav-center img {
         height: 35px;
+    }
+
+    .HopePage1 {
+        height: auto;
+        max-width: 100%;
     }
 
     .footer-container {
