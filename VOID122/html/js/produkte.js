@@ -53,16 +53,40 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const section = urlParams.get('section');
-        
-        if (section) {
-            // Hide all sections
-            document.querySelectorAll('.Artikel').forEach((el) => el.style.display = 'none');
-            
-            // Show the relevant section
-            document.getElementById(section).style.display = 'block';
-        }
-    });
+    function setCategory(category) {
+        localStorage.setItem('selectedCategory', category);
+    }
 
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var selectedCategory = localStorage.getItem('selectedCategory');
+
+            if (selectedCategory) {
+                filterProducts(selectedCategory);
+            }
+
+            function filterProducts(category) {
+                var allProducts = document.querySelectorAll('.Tshirt');
+
+                allProducts.forEach(function(product) {
+                    var productCategory = product.dataset.category;
+
+                    if (category === 'all' || productCategory === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+
+            var navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    localStorage.setItem('selectedCategory', 'all');
+                });
+            });
+        });
