@@ -73,16 +73,16 @@ nav {
 .Logo {
     height: 45px;
     width: auto;
-    margin-left: -60px; 
+    margin-right: 55px;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px; 
-    margin-top: 50px; 
-    padding: 0; 
+    height: 40px; /* Adjust as needed */
+    margin-top: 60px; /* Adjust to fit your design */
+    padding: 0; /* No padding */
 }
 
 h1 {
@@ -90,7 +90,7 @@ h1 {
     font-size: 15px;
     margin: 0; 
     text-align: center;
-    margin-top: 65px;
+    margin-top: 40px; /* Adjust as needed */
 }
 
 .MiddleSec {
@@ -287,21 +287,8 @@ footer p {
 
     .nav-center {
         order: -1;
-    }
-
-    .text2 h2 {
-        font-size: 18px;
-        top: 35%;
-    }
-
-    .text2 h3 {
-        font-size: 45px;
-        top: 45%;
-    }
-
-    .Menbutton {
-        font-size: 18px;
-        top: 55%;
+        position: static;
+        transform: none;
     }
 
     .footer-container {
@@ -320,6 +307,17 @@ footer p {
     .payment img {
         width: 80%;
     }
+
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -335,39 +333,20 @@ footer p {
         height: 35px;
     }
 
-    .text2 h2 {
-        font-size: 16px;
-        top: 30%;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .text2 h3 {
-        font-size: 40px;
-        top: 40%;
+    .footer-section {
+        margin: 20px 0;
     }
 
-    .Menbutton {
-        font-size: 16px;
-        padding: 10px 20px;
-        top: 50%;
+    .Email, .Absenden {
+        width: 80%;
     }
 
-    h4 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-section h6 {
-        font-size: 14px;
-    }
-
-    .footer-section a {
-        font-size: 10px;
+    .payment img {
+        width: 80%;
     }
 }
